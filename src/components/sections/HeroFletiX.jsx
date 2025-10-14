@@ -1,35 +1,14 @@
 import React from 'react';
-import { Download, UserPlus, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight } from 'lucide-react';
+import { FaWhatsapp, FaFilePdf } from 'react-icons/fa';
 import fletixLogo from '../../assets/logos/logo_fletix.png';
 
 /**
  * Hero principal de FletiX - Split Screen Moderno
  * Logo/Visual izquierda → Info/Botones derecha
+ * Con iconos oficiales de react-icons
  */
 const HeroFletiX = () => {
-  
-  // Función para descargar vCard
-  const handleAddContact = () => {
-    const vcard = `BEGIN:VCARD
-VERSION:1.0
-FN:FletiX - Core Bug Code
-ORG:Core Bug Code
-TEL;TYPE=CELL:+51973337625
-EMAIL:core.bugcode@gmail.com
-URL:https://corebug.com
-END:VCARD`;
-
-    const blob = new Blob([vcard], { type: 'text/vcard' });
-    const url = window.URL.createObjectURL(blob);
-    
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'FletiX_Contacto.vcf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
-  };
 
   return (
     <div className="min-h-screen flex items-center px-4 py-12 sm:py-16">
@@ -59,9 +38,6 @@ END:VCARD`;
               <div className="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold text-xs sm:text-sm shadow-lg animate-bounce">
                 ¡Disponible!
               </div>
-              {/* <div className="absolute -bottom-4 -left-4 bg-cyan-400 text-black px-4 py-2 rounded-full font-bold text-xs sm:text-sm shadow-lg">
-                10K+ usuarios
-              </div>*/}
             </div>
           </div>
 
@@ -107,22 +83,40 @@ END:VCARD`;
               ))}
             </ul>
 
-            {/* Botones */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-6 justify-center md:justify-start">
+            {/* Botones - Todos del mismo tamaño */}
+            <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 mb-6 justify-center md:justify-start">
+              {/* Botón Descargar */}
               <a
                 href="https://play.google.com/store/apps/details?id=com.corebugcode.fletix"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-6 py-3 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold text-base sm:text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
               >
                 <Download className="w-5 h-5" />
-                <span>Descargar Ahora</span>
+                <span>Descargar</span>
               </a>
-              <button 
-                onClick={handleAddContact}
+
+              {/* Botón WhatsApp */}
+              <a
+                href="https://wa.me/51973337625?text=Hola%20FletiX,%20quiero%20más%20información"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-6 py-3 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-base sm:text-lg hover:shadow-xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105"
               >
-                <UserPlus className="w-5 h-5" />
-                <span>Agregar Contacto</span>
-              </button>
+                <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span>WhatsApp</span>
+              </a>
+
+              {/* Botón PDF */}
+              <a
+                href="/brochure-fletix.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-6 py-3 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-base sm:text-lg hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+              >
+                <FaFilePdf className="w-5 h-5" />
+                <span>Nosotros</span>
+              </a>
             </div>
 
             {/* Powered by */}
