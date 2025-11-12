@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroFletiX from '../components/sections/HeroFletiX';
 import FeaturesFletiX from '../components/sections/FeaturesFletiX';
-import StatsFletiX from '../components/sections/StatsFletiX';
+//import StatsFletiX from '../components/sections/StatsFletiX';
 import CTAFletiX from '../components/sections/CTAFletiX';
 import Footer from '../components/layout/Footer';
 
