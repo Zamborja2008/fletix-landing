@@ -5,6 +5,9 @@ import FeaturesFletiX from '../components/sections/FeaturesFletiX';
 import CTAFletiX from '../components/sections/CTAFletiX';
 import Footer from '../components/layout/Footer';
 
+import HowItWorksFletiX from '../components/sections/HowItWorksFletiX';
+import SecurityFletiX from '../components/sections/SecurityFletiX';
+
 /**
  * Landing Page completa de FletiX
  * Página única enfocada 100% en FletiX
@@ -15,8 +18,15 @@ const FletiXLandingPage = () => {
       {/* Hero principal con logo y CTAs */}
       <HeroFletiX />
 
-      {/* Características del producto */}
+      {/* Características general del producto */}
       <FeaturesFletiX />
+
+
+      {/* ¿Cómo funciona FletiX? */}
+      <HowItWorksFletiX />
+
+      {/* Tu información está protegida */}
+      <SecurityFletiX />
 
       {/* Estadísticas 
       <StatsFletiX />*/}

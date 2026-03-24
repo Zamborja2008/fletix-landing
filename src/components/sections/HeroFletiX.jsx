@@ -3,7 +3,7 @@ import { Download, CheckCircle, Menu, X } from 'lucide-react';
 import { FaWhatsapp, FaFilePdf } from 'react-icons/fa';
 import fletixLogo from '../../assets/logos/logo_fletix.png';
 import imagen1 from '../../assets/images/hero/transportistas.png';
-import imagen4 from '../../assets/images/hero/dashboard.png';
+import imagen4 from '../../assets/images/hero/fletixsecurity.png';
 
 /**
  * Hero FletiX con Carrusel de Imágenes de Fondo
@@ -31,14 +31,14 @@ const HeroFletiX = () => {
     {
       // IMAGEN 3: Importa tu imagen aquí
       image: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1920&h=1080&fit=crop', // PLACEHOLDER - REEMPLÁZALO
-      title: 'Cotización automatizada de rutas en tiempo real',
+      title: 'Cotización automatizada de rutas',
       alt: 'Cotización de rutas'
     },
     {
       // IMAGEN 4: Importa tu imagen aquí
       image: imagen4, // PLACEHOLDER - REEMPLÁZALO
-      title: 'Dashboard con analytics y reportes avanzados',
-      alt: 'Dashboard analytics'
+      title: 'Seguridad garantizada',
+      alt: 'Tu información está protegida'
     }
   ];
 
@@ -75,7 +75,7 @@ const HeroFletiX = () => {
                   Fleti<span style={{ color: '#26A69A' }}>X</span>
                 </h1>
                 <p className="text-[8px] sm:text-xs text-blue-600 font-semibold uppercase">
-                  Plataforma Logística
+                  Plataforma Digital de Logística
                 </p>
               </div>
             </div>
@@ -225,7 +225,8 @@ const HeroFletiX = () => {
                   {[
                     'Potenciando conexiones',
                     'Encuentra proveedores a nivel nacional',
-                    'Encuentra servicios logísticos a nivel nacional'
+                    'Encuentra servicios logísticos a nivel nacional',
+                    'Tu información está protegida con normativa peruana',
                   ].map((item, i) => (
                     <div 
                       key={i} 
@@ -256,7 +257,7 @@ const HeroFletiX = () => {
 
                       {/* Frase Principal - Responsive */}
                       <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                        Conectamos Empresas con Transportistas de Confianza
+                        Conectamos Empresas con Proveedores de Confianza
                       </h3>
 
                       {/* Decoración inferior */}

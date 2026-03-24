@@ -1,14 +1,14 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Users } from 'lucide-react';
 import { FaTiktok, FaInstagram, FaWhatsapp, FaFacebook } from 'react-icons/fa';
 
 /**
- * Footer de FletiX - Versión Profesional
- * Diseño corporativo limpio tipo eFletex
+ * Footer de FletiX
+ * ESTANDARIZADA — Design tokens unificados
+ * Cambios: badge rounded-full, padding unificado
  */
 const Footer = () => {
   
-  // Configuración de redes sociales
   const socialLinks = [
     { 
       icon: <FaFacebook className="w-5 h-5" />,
@@ -38,18 +38,20 @@ const Footer = () => {
 
   return (
     <>
-      {/* Sección de Redes Sociales - Fondo gris claro */}
-      <div className="py-16 sm:py-20 px-4 bg-gray-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-blue-100 text-blue-900 px-4 py-2 rounded-lg font-semibold mb-6">
-            SÍGUENOS
-          </span>
+      {/* Sección de Redes Sociales */}
+      <div className="py-10 md:py-14 px-4 bg-gray-100">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Badge — Estándar unificado */}
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <Users className="w-4 h-4" />
+            Síguenos
+          </div>
           
-          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900">
-            Mantente Conectado con <span className="text-blue-600">FletiX</span>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
+            Mantente Conectado con Fleti<span style={{ color: '#26A69A' }}>X</span>
           </h3>
           
-          {/* Grid de redes sociales - más profesional */}
+          {/* Grid de redes sociales */}
           <div className="flex flex-wrap justify-center gap-4">
             {socialLinks.map((social, index) => (
               <a
@@ -57,7 +59,9 @@ const Footer = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-14 h-14 rounded-lg bg-gray-800 ${social.color} flex items-center justify-center transition-all duration-300 text-white hover:scale-110 shadow-lg`}
+                className={`w-14 h-14 rounded-xl bg-gray-800 ${social.color} 
+                           flex items-center justify-center transition-all duration-300 
+                           text-white hover:scale-105 shadow-lg`}
                 title={social.name}
                 aria-label={social.name}
               >
@@ -68,9 +72,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Principal - Fondo oscuro */}
+      {/* Footer Principal */}
       <footer className="bg-gray-900 text-gray-300 py-12 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           
           {/* Grid de columnas */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -79,7 +83,7 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-bold text-lg mb-4">Sobre FletiX</h4>
               <p className="text-sm leading-relaxed text-gray-400 mb-4">
-                Plataforma tecnológica líder que conecta empresas con transportistas profesionales en todo el Perú.
+                Plataforma digital tecnológica que conecta empresas con transportistas profesionales en todo el Perú.
               </p>
               <p className="text-sm text-gray-400">
                 Optimiza tu cadena logística con soluciones digitales innovadoras.
@@ -98,11 +102,11 @@ const Footer = () => {
                   <span>+51 973 337 625</span>
                 </a>
                 <a 
-                  href="mailto:core.bugcode@gmail.com"
+                  href="mailto:fletixapp.contacto@gmail.com"
                   className="flex items-center gap-3 hover:text-blue-400 transition"
                 >
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  <span>core.bugcode@gmail.com</span>
+                  <span>fletixapp.contacto@gmail.com</span>
                 </a>
                 <div className="flex items-start gap-3 text-gray-400">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
@@ -126,6 +130,16 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="#seguridad" className="hover:text-blue-400 transition">
+                    Seguridad
+                  </a>
+                </li>
+                <li>
+                  <a href="#como-funciona" className="hover:text-blue-400 transition">
+                    Cómo Funciona
+                  </a>
+                </li>
+                <li>
                   <a href="https://wa.me/51973337625" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
                     Solicitar Demo
                   </a>
@@ -146,7 +160,7 @@ const Footer = () => {
                 © 2025 FletiX. Todos los derechos reservados.
               </p>
               <p>
-                Desarrollado por <span className="text-blue-400 font-semibold">Core Bug Code</span>
+                Desarrollado por <span className="text-blue-400 font-semibold">FletiX App</span>
               </p>
             </div>
           </div>

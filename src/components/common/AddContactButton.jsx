@@ -13,7 +13,7 @@ const AddContactButton = () => {
     name: 'CoreBugCode',
     company: 'CoreBugCode',
     phone: '+51973337625',
-    email: 'core.bugcode@gmail.com',
+    email: 'fletixapp.contacto@gmail.com',
     //website: 'https://corebug.com',
     //address: 'Jesus Maria, Lima, Peru' 
   };
